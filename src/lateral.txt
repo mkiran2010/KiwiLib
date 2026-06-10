@@ -1,0 +1,5 @@
+kp
+// tune to when it just starts oscillating
+
+kd
+// error band centered, less oscillation 

@@ -59,9 +59,9 @@ lemlib::Drivetrain drivetrain(
 
 //controller settings
 lemlib::ControllerSettings lateralController(
-    10,                           //kP
+    2,                           //kP
     0,                         //kI
-    56,                           //kD    
+    0,                           //kD    
     4,                   //windup range
     0.5,                    //small error
     50,           //small error timeout
@@ -73,7 +73,7 @@ lemlib::ControllerSettings lateralController(
 lemlib::ControllerSettings angularController(
     2.73, //TODO: BOOSTED THIS BY 0.25
     0,
-    18,
+    20,
     5,
     2,
     50,

@@ -20,3 +20,5 @@ void runConsole();
 
 //controller screen print function
 void runController();
+
+void PIDTuning(int mode, float amount);

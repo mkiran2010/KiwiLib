@@ -24,24 +24,23 @@ void competition_initialize() {}
 
 void autonomous() {
 	chassis.setBrakeMode(pros::E_MOTOR_BRAKE_BRAKE);
+	chassis.setPose(0,0,0);
+	chassis.moveToPose(0, 24, 0, 1000);
+	// PIDTuning(1, 24);
 
 	// challenge();
-	drunkDrivin();
+	//drunkDrivin();
 }
 
 void opcontrol() {
 	//driver
-	chassis.setBrakeMode(pros::E_MOTOR_BRAKE_COAST);
-	intakeState = 0;
 
 	while (true) {
 		// subsystem updates
 		//updateIntake();
 		//updatePistons();
-		if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)) {
-			chassis.setPose(0,0,0); 
-			chassis.turnToHeading(180, 1000);
-		}
+		PIDTuning(1, 24);
+
 		//drive
 		int throttle = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
 		int turn = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);

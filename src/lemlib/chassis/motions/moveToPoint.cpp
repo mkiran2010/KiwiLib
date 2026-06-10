@@ -4,6 +4,7 @@
 #include "lemlib/timer.hpp"
 #include "lemlib/util.hpp"
 #include "pros/misc.hpp"
+#include <iostream>
 
 void lemlib::Chassis::moveToPoint(float x, float y, int timeout, MoveToPointParams params, bool async) {
     params.earlyExitRange = fabs(params.earlyExitRange);
