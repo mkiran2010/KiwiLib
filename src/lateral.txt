@@ -1,5 +1,23 @@
 kp
 // tune to when it just starts oscillating
+1, 1, low
+2, 2, low
+3, 4, low
+4, 8 , low perhaps? small oscillation
+5, 16, too high oscillation
+6, 12
+
 
 kd
 // error band centered, less oscillation 
+1,1, low
+2, 2, low
+3, 4, low
+4, 8, low
+5, 16, low
+6, 32, low
+7, 64, low
+8, 128, high
+9, 96, high
+10, 80, high
+11, 72
