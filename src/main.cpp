@@ -23,9 +23,8 @@ void disabled() {}
 void competition_initialize() {}
 
 void autonomous() {
-	chassis.setBrakeMode(pros::E_MOTOR_BRAKE_BRAKE);
-	chassis.setPose(0,0,0);
-	chassis.moveToPose(0, 24, 0, 1000);
+	chassis.setBrakeMode(pros::E_MOTOR_BRAKE_COAST);
+	override();
 	// PIDTuning(1, 24);
 
 	// challenge();
